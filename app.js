@@ -4,7 +4,7 @@ const Header = ()=>{
     return (
     <div className="header">
         <div className="logo-container">
-            <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOi9-KJVKszed17zhOdfxitHm7A5wcOrftg&usqp=CAU"/>
+            <img className="logo" src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png?nwm=1&nws=1&industry=food&sf="/>
         </div>
         <div className="nav-items">
             <ul>
@@ -12,6 +12,7 @@ const Header = ()=>{
                 <li>about us</li>
                 <li>contact us</li>
                 <li>cart</li>
+                <li>hello </li>
             </ul>
         </div>
     </div>
