@@ -33,3 +33,6 @@ when we use dynamically send the data use it a props
 conflict driven ui
 controlling ur ui using data conflict from the backend
 ui and data layer to form the app
+not using keys are unacceptable
+dont use index
+ unique id as key
