@@ -2,18 +2,48 @@
     display:flex;
     justify-content: space-between;
     border: 1px solid black;
+
 }
+
+    
 .logo {
     width: 200px;
 
 }
-.nav-items> ul{
-    font-size:48px;
-    display:flex;
+.nav-items{
     padding:0px 20px;
+}
+.nav-items> ul{
+    font-size:26px;
+    display:flex;
+ 
     list-style-type: none;
+}
+.res-container{
+    display:flex ;
+    flex-wrap:wrap;
+
 }
 .nav-items> ul > li{
     padding:10px;
     margin:10px
+}
+.res-card{
+    width: 200px;
+    margin: 5px;
+    height: 400px;
+    border:1px solid black;
+    
+}
+
+.res-card:hover{
+    cursor:pointer;
+    border: 1px solid black;
+}
+.search{
+    padding:20px;
+}
+.res-logo{
+    margin: 5px;
+    width:190px;
 }

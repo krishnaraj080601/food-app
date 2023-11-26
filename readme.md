@@ -29,3 +29,7 @@ everything in a react is a components
 class base components-old
 functional base components-new
 (normal javascript function) is a functional returning the react element(some piece of jsx)
+when we use dynamically send the data use it a props
+conflict driven ui
+controlling ur ui using data conflict from the backend
+ui and data layer to form the app
