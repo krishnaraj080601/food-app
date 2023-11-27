@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Header from "./Components/Header";
+import Body from "./Components/Body";
 
 const RestaurantCard= (props)=>{
     //console.log(props);
@@ -1651,19 +1652,7 @@ const resList=[
         
     
     
-const Body= ()=>{
-return(
-    <div className="Body">
-        <div className="Search">Search</div>
-        <div className="res-container">
-        {
-            resList.map((restaurant=><RestaurantCard key={restaurant.info.id} resData ={restaurant}/>))
-        }
-            
-            </div>
-    </div>
-)
-}
+
 const Applayout =() =>{
     return(
         <div className="app">
