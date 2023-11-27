@@ -1,3 +1,5 @@
+import { CDN_URL } from "../Utils/Constant";
+
 const RestaurantCard= (props)=>{
     //console.log(props);
     const{resData}= props;
