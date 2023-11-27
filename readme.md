@@ -36,3 +36,12 @@ ui and data layer to form the app
 not using keys are unacceptable
 dont use index
  unique id as key
+
+
+ Two types of Export/Import
+
+Default Export/Import
+export default Component; import Component from "path";
+
+Named Export/Import
+export const Component; import {Component} from "path";
