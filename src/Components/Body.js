@@ -4,7 +4,9 @@ const Body= ()=>{
     return(
         <div className="Body">
             <div className="filter">
-                <button className="filter-btn">Top rated restaurant</button>
+                <button className="filter-btn"
+                onMouseOver={()=>{console.log("button clicked")}}
+                >Top rated restaurant</button>
             </div>
             <div className="res-container">
             {
