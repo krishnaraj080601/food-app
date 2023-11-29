@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../Utils/MockData";
 import { useState } from "react";
 const Body= ()=>{
-    const [listorestaurants]=useState([{
+    const  listofrestaurants=useState([{
         "info": {
             "id": "348158",
             "name": "Covai Anganan Biriyani House",
@@ -78,7 +78,7 @@ const Body= ()=>{
     },
     {
         "info": {
-            "id": "348157",
+            "id": "3481562",
             "name": "dominos pizza",
             "cloudinaryImageId": "riylxbx0j4kzeii1sef7",
             "locality": "VCV Layout",
@@ -153,7 +153,6 @@ const Body= ()=>{
     
 
 ]);
-    
     return(
         <div className="Body">
             <div className="filter">
