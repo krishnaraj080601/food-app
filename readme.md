@@ -45,3 +45,4 @@ export default Component; import Component from "path";
 
 Named Export/Import
 export const Component; import {Component} from "path";
+use state hook -super power react variable

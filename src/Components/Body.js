@@ -1,7 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../Utils/MockData";
+import { useState } from "react";
 const Body= ()=>{
-    let listofrestaurants=[{
+    const listorestaurants=useState([{
         "info": {
             "id": "348158",
             "name": "Covai Anganan Biriyani House",
@@ -14,7 +15,7 @@ const Body= ()=>{
                 "South Indian",
                 "Chinese"
             ],
-            "avgRating": 4.1,
+            "avgRating": 3,
             "feeDetails": {
                 "restaurantId": "348158",
                 "fees": [
@@ -151,14 +152,16 @@ const Body= ()=>{
     },
     
 
-]
+]);
+    
     return(
         <div className="Body">
             <div className="filter">
                 <button className="filter-btn"
-                onMouseOver={()=>{ listofrestaurants = listOfRestaurants.filter(
+                onMouseOver={()=>{ listofrestaurants = listofrestaurants.filter(
                     (res) => res.info.avgRating > 4
                   );
+                  console.log(listofrestaurants);
                   }}
                 >Top rated restaurant</button>
             </div>
