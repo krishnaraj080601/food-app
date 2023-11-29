@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../Utils/MockData";
 import { useState } from "react";
 const Body= ()=>{
-    const listorestaurants=useState([{
+    const [listorestaurants]=useState([{
         "info": {
             "id": "348158",
             "name": "Covai Anganan Biriyani House",
