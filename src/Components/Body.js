@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../Utils/MockData";
 import { useEffect, useState } from "react";
+import Shimmer from "./Shimmer";
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
     useEffect(() => {
@@ -11,6 +11,9 @@ const fetchdata=async ()=>{
  const json = await data.json();
  setlistofrestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
  
+}
+if(listofrestaurants.length === 0){
+    return <Shimmer/>
 }
 
     return(
