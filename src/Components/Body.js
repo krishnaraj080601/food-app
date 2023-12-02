@@ -9,6 +9,8 @@ const Body= ()=>{
 const fetchdata=async ()=>{
     const  data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.0168445&lng=76.9558321&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
  const json = await data.json();
+ console.log(json.info.cards[5].card.card.gridElements.infoStyle.restaurants);
+ 
 }
 
     return(
