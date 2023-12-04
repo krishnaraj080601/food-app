@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
-    
+    const [searchText, setSearchText] = useState("");
     useEffect(() => {
         fetchdata();
       }, []);
@@ -21,8 +21,11 @@ const fetchdata=async ()=>{
         <div className="Body">
             <div className="filter">
             <div className="search">
-          <input type="text" className="search-box"/>
-   <button>search</button>
+          <input type="text" className="search-box" value={searchText}/>
+   <button onClick={()=>{
+    console.log(searchText)
+   }
+   }>search</button>
         </div>
                 <button className="filter-btn"
                 onMouseOver={()=>{ const filterlist = listofrestaurants.filter(
