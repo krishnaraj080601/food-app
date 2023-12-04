@@ -11,18 +11,20 @@ const Header = ()=>{
         </div>
         <div className="nav-items">
             <ul>
-                <li>home</li>
+            <li>home</li>
                 <li >
-                    <link to="/About">about us</link></li>
+                    <Link to="/About">about us</Link></li>
                 <li>
-                    contact us</li>
+                   <Link to="/Contact">contact us</Link>
+                    </li>
                 <li>cart</li>
+                
                 <button className="login" onClick={()=>{
                      btnNameReact === "Login"
                      ? setBtnNameReact("Logout")
                      : setBtnNameReact("Login");
                 }}>{btnNameReact}</button>
-            </ul>
+                </ul>
         </div>
     </div>
     );
