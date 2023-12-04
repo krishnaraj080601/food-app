@@ -21,9 +21,13 @@ const fetchdata=async ()=>{
         <div className="Body">
             <div className="filter">
             <div className="search">
-          <input type="text" className="search-box" value={searchText}/>
+          <input type="text" className="search-box" value={searchText} onChange={(e) => {
+              setSearchText(e.target.value);
+            }}/>
    <button onClick={()=>{
     console.log(searchText)
+    const filtercard= listofrestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+    setlistofrestaurants(filtercard);
    }
    }>search</button>
         </div>
