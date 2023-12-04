@@ -1,8 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { MENU_API } from "../Utils/Constant";
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
+
     const [searchText, setSearchText] = useState("");
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     useEffect(() => {

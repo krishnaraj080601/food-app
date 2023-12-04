@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Shimmer from './Shimmer';
 import { useParams } from 'react-router-dom';
+import { MENU_API } from '../Utils/Constant';
 
 const RestaurantMenu = () => {
     const [resInfo,setresinfo]= useState(null)
@@ -9,7 +10,7 @@ const RestaurantMenu = () => {
         fetchMenu();
       }, []);
     const fetchMenu=async ()=>{
-        const  data = await fetch(M+{resId})
+        const  data = await fetch(MENU_API+{resId})
      const json = await data.json();
      console.log(json);
      setresinfo(json.data);
