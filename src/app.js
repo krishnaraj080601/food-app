@@ -17,7 +17,8 @@ const Applayout =() =>{
 const approuter=createBrowserRouter([
     {
         path:"/",
-        element:<Applayout/>
+        element:<Applayout/>,
+        errorElement:<Error/>
 
 },
 {
