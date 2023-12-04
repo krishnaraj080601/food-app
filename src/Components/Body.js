@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer";
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
     const [searchText, setSearchText] = useState("");
+    const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     useEffect(() => {
         fetchdata();
       }, []);
@@ -11,7 +12,9 @@ const fetchdata=async ()=>{
     const  data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=11.0168445&lng=76.9558321&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
  const json = await data.json();
  setlistofrestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
- 
+ setFilteredRestaurant(
+    json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+  );
 }
 
 
@@ -26,8 +29,8 @@ const fetchdata=async ()=>{
             }}/>
    <button onClick={()=>{
     console.log(searchText)
-    const filtercard= listofrestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
-    setlistofrestaurants(filtercard);
+    const filteredRestaurant= listofrestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+    setlistofrestaurants(filteredRestaurant);
    }
    }>search</button>
         </div>
@@ -42,7 +45,7 @@ const fetchdata=async ()=>{
             </div>
             <div className="res-container">
             {
-                listofrestaurants.map((restaurant=><RestaurantCard key={restaurant.info.id} resData ={restaurant}/>))
+                filteredRestaurant.map((restaurant=><RestaurantCard key={restaurant.info.id} resData ={restaurant}/>))
             }
                 
                 </div>
