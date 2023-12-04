@@ -30,7 +30,7 @@ const fetchdata=async ()=>{
    <button onClick={()=>{
     console.log(searchText)
     const filteredRestaurant= listofrestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
-    setlistofrestaurants(filteredRestaurant);
+    setFilteredRestaurant(filteredRestaurant);
    }
    }>search</button>
         </div>
