@@ -68,3 +68,6 @@ flex-wrap: wrap;
     cursor: pointer;
 
 }
+.filter{
+    display:flex;
+}
