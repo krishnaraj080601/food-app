@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom';
 import { MENU_API } from '../Utils/Constant';
 
 const RestaurantMenu = () => {
+  const params = useParams();
+  console.log(params)
+
     const [resInfo,setresinfo]= useState(null)
     useEffect(() => {
         fetchMenu();
