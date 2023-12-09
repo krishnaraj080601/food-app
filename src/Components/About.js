@@ -12,12 +12,21 @@ class About extends Component{
   componentDidMount() {
     console.log("Parent Component Did Mount");
   }
+  componentDidUpdate() {
+    console.log("Component Did Update");
+  }
+
+  componentWillUnmount() {
+    console.log("Component Will Unmount");
+  }
+
+
   render(){
   return (
     <div>
         <h1>about</h1>
         <h2>food ordering website</h2>
-        <User/>
+      
         <UserClass name={"krishnaraj.G"} location={"Neyveli TS"}/>
     </div>
   )
@@ -25,3 +34,24 @@ class About extends Component{
 }
 
 export default About
+/****
+ *
+ * --- MOUNTING ----
+ *
+ * Constructor (dummy)
+ * Render (dummy)
+ *      <HTML Dummy >
+ * Component Did MOunt
+ *      <API Call>
+ *      <this.setState> -> State variable is updated
+ *
+ * ---- UPDATE
+ *
+ *      render(APi data)
+ *      <HTML (new API data>)
+ *      ccomponentDid Update
+ *
+ *
+ *
+ *
+ */
