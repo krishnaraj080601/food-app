@@ -3,6 +3,7 @@ import React from "react";
 class UserClass extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props)
 
     this.state = {
       count:0,
