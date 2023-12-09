@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { Component } from 'react'
 import User from './User'
 import UserClass from './Userclass'
 
-const About = () => {
+class About extends Component{
+  constructor(props) {
+    super(props);
+
+    console.log("Parent Constructor");
+  }
+
+  componentDidMount() {
+    console.log("Parent Component Did Mount");
+  }
+  render(){
   return (
     <div>
         <h1>about</h1>
@@ -11,6 +21,7 @@ const About = () => {
         <UserClass name={"krishnaraj.G"} location={"Neyveli TS"}/>
     </div>
   )
+}
 }
 
 export default About
