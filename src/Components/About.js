@@ -8,7 +8,7 @@ const About = () => {
         <h1>about</h1>
         <h2>food ordering website</h2>
         <User/>
-        <UserClass name={"krishna"} location={"neyveli"}/>
+        <UserClass name={"krishnaraj.G"} location={"Neyveli TS"}/>
     </div>
   )
 }
