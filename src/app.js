@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Header from "./Components/Header";
@@ -8,7 +8,6 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
-//import Grocery from "./Components/Grocery";
 const Grocery = lazy(() => import("./Components/Grocery"));
 const Applayout =() =>{
     return(
