@@ -45,6 +45,7 @@ if (onlineStatus === false)
    }
    }>search</button>
         </div>
+        <div className="search m-4 p-4 flex items-center">
                 <button className="px-4 py-2 bg-gray-100 rounded-lg"
                 onMouseOver={()=>{ const filterlist = listofrestaurants.filter(
                     (res) => res.info.avgRating > 4
@@ -53,6 +54,7 @@ if (onlineStatus === false)
                   setlistofrestaurants(filterlist);
                   }}
                 >Top rated restaurant</button>
+            </div>
             </div>
             <div className="flex flex-wrap">
             {
