@@ -32,6 +32,11 @@ const approuter=createBrowserRouter([
             path: "/Contact",
             element: <Contact/>,
           },
+          { 
+            path: "/",
+            element: <Contact />,
+
+          },
           {
             path: "/restaurants/:resId",
             element: <RestaurantMenu/>,
