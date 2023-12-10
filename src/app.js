@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import Grocery from "./Components/Grocery";
 const Applayout =() =>{
     return(
         <div className="app">
@@ -33,8 +34,8 @@ const approuter=createBrowserRouter([
             element: <Contact/>,
           },
           { 
-            path: "/",
-            element: <Contact />,
+            path: "/grocery",
+            element: <Grocery/>,
 
           },
           {
