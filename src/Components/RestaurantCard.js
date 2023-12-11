@@ -17,8 +17,8 @@ const RestaurantCard= ({data})=>{
 export const withOffersHeader = (RestaurantCard) => {
     return (props) => {
       const offers =
-        resu.props.info.aggregatedDiscountInfoV3 ||
-        resu.props.info.aggregatedDiscountInfoV2;
+        props.data.info.aggregatedDiscountInfoV3 ||
+        props.data.info.aggregatedDiscountInfoV2;
   
       return (
         <div>

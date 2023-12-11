@@ -58,6 +58,7 @@ if (onlineStatus === false)
                   setlistofrestaurants(filterlist);
                   }}
                 >Top rated restaurant</button>
+                
             </div>
             </div>
             <div className="flex flex-wrap">
@@ -67,31 +68,17 @@ if (onlineStatus === false)
                 key={restaurant?.info.id}
                 to={"/restaurants/" + restaurant?.info.id}
               >
-            <RestaurantCard resData ={restaurant}/>
+            {isObjectEmpty(
+                    restaurant.info.aggregatedDiscountInfoV3 ||
+                      restaurant.info.aggregatedDiscountInfoV2
+                  ) ? (
+                    <RestaurantCard data={restaurant} />
+                  ) : (
+                    <RestaurantCardOffers data={restaurant} />
+                  )}
             </Link>
             ))}
-            <div
-            className="res-container gap-5"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 30%))",
-            }}
-          >
-            {filteredRestaurant.map((res) => {
-              return (
-                <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
-                  {isObjectEmpty(
-                    res.info.aggregatedDiscountInfoV3 ||
-                      res.info.aggregatedDiscountInfoV2
-                  ) ? (
-                    <RestaurantCard data={res} />
-                  ) : (
-                    <RestaurantCardOffers data={res} />
-                  )}
-                </Link>
-              );
-            })}
-          </div>
+           
                 
                 </div>
         </div>
