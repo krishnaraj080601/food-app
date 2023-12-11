@@ -1,14 +1,17 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withOffersHeader } from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { MENU_API } from "../Utils/Constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
+import isObjectEmpty from "../Utils/emptyobject";
+
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
 
     const [searchText, setSearchText] = useState("");
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+    const RestaurantCardOffers = withOffersHeader(RestaurantCard);
     useEffect(() => {
         fetchdata();
       }, []);
@@ -19,6 +22,7 @@ const fetchdata=async ()=>{
  setFilteredRestaurant(
     json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
   );
+  
 }
 const onlineStatus = useOnlineStatus();
 
@@ -66,6 +70,28 @@ if (onlineStatus === false)
             <RestaurantCard resData ={restaurant}/>
             </Link>
             ))}
+            <div
+            className="res-container gap-5"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 30%))",
+            }}
+          >
+            {filteredRes.map((res) => {
+              return (
+                <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
+                  {isObjectEmpty(
+                    res.info.aggregatedDiscountInfoV3 ||
+                      res.info.aggregatedDiscountInfoV2
+                  ) ? (
+                    <RestaurantCard data={res} />
+                  ) : (
+                    <RestaurantCardOffers data={res} />
+                  )}
+                </Link>
+              );
+            })}
+          </div>
                 
                 </div>
         </div>
