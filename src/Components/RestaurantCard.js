@@ -1,15 +1,15 @@
 import { CDN_URL } from "../Utils/Constant";
 
-const RestaurantCard= (props)=>{
+const RestaurantCard= ({data})=>{
     //console.log(props);
-    const{resData}= props;
-    const{name,cloudinaryImageId,cuisines,avgRating}=resData?.info;
+   // const{resData}= props;
+   // const{name,cloudinaryImageId,cuisines,avgRating}=resData?.info;
     return(
         <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
-            <img className="rounded-lg" alt="res-logo" src={CDN_URL+cloudinaryImageId}/>
-            <h4 className="font-bold py-4 text-lg" >{name}</h4>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4><img src=""/>{avgRating}</h4>
+            <img className="rounded-lg" alt="res-logo" src={CDN_URL+data?.info.cloudinaryImageId}/>
+            <h4 className="font-bold py-4 text-lg" >{data?.info.name}</h4>
+            <h4>{data?.info.cuisines.join(", ")}</h4>
+            <h4>{data?.info.avgRating} ★</h4>
             <h4>37 min</h4>
         </div>
     )
@@ -17,8 +17,8 @@ const RestaurantCard= (props)=>{
 export const withOffersHeader = (RestaurantCard) => {
     return (props) => {
       const offers =
-        props.data.info.aggregatedDiscountInfoV3 ||
-        props.data.info.aggregatedDiscountInfoV2;
+        resu.props.info.aggregatedDiscountInfoV3 ||
+        resu.props.info.aggregatedDiscountInfoV2;
   
       return (
         <div>

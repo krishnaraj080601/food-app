@@ -77,7 +77,7 @@ if (onlineStatus === false)
               gridTemplateColumns: "repeat(auto-fit, minmax(250px, 30%))",
             }}
           >
-            {filteredRes.map((res) => {
+            {filteredRestaurant.map((res) => {
               return (
                 <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
                   {isObjectEmpty(
