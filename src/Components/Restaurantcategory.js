@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import List from './List';
-const Restaurantcategory = ({data}) => {
-    const[showitems,setshowitems]=useState(false);
+const Restaurantcategory = ({data,showitems}) => {
+    
     console.log(data);
-    const handleclick = () => {
-        setshowitems(!showitems);
-      };
+    
   return (
     <div>
         <div className='w-6/12 mx-auto my-4 bg-gray-50 shadow-lg p-4'>
