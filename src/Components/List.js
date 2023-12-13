@@ -21,7 +21,7 @@ const List = ({items}) => {
                  <div className='w-3/12 p-4'>
                     <div className='absolute'>
                     <button
-                className="mx-12 p-1 bg-black-700 text-white shadow-lg rounded-lg hover:bg-white hover:text-white-800 font-bold border border-black-500"
+                className="mx-12 p-1 bg-gray-700 text-white shadow-lg rounded-lg hover:bg-black hover:text-white-800 font-bold border border-black-500"
               >
                 Add +
               </button>
