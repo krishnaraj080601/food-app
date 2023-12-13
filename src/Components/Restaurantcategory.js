@@ -1,8 +1,12 @@
 import React from 'react'
 import List from './List';
-const Restaurantcategory = ({data,showitems,setShowIndex}) => {
+const Restaurantcategory = ({data,showitems,setShowIndex,index}) => {
     const handleclick = () => {
-        setShowIndex();
+        if (showItems === true) {
+            setShowIndex(null);
+          } else {
+            setShowIndex(index);
+          }
       };
     console.log(data);
     

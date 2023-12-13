@@ -27,7 +27,8 @@ const RestaurantMenu = () => {
         <p className='font-bold text-lg'> {cuisines.join(", ")} - {costForTwoMessage}</p>
         {categories.map((category,index) =>(<Restaurantcategory data={category?.card?.card}  key={category?.card?.card.title}
         showitems={index === showindex ? true : false}
-        setShowIndex={() => setShowIndex(index)}
+        setShowIndex={setShowIndex}
+          index={index}
         />
         ))}
         </div>
