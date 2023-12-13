@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Shimmer from './Shimmer';
 import { useParams } from 'react-router-dom';
 import useRestaurantMenu from '../Utils/useRestaurantMenu';
@@ -6,7 +6,7 @@ import Restaurantcategory from './Restaurantcategory';
 
 const RestaurantMenu = () => {
   const {resId}= useParams();
-  const [showitems, setshowitems] = useState();
+  const [showIndex, setShowIndex] = useState(null);
 
    
     const resInfo = useRestaurantMenu(resId);
@@ -26,8 +26,8 @@ const RestaurantMenu = () => {
         <h1 className='font-bold my-6 text-2xl'>{name}</h1>
         <p className='font-bold text-lg'> {cuisines.join(", ")} - {costForTwoMessage}</p>
         {categories.map((category,index) =>(<Restaurantcategory data={category?.card?.card}  key={category?.card?.card.title}
-        showitems={index === showitems ? true : false}
-        setshowitems={() => setshowitems(index)}
+        showitems={index === showindex ? true : false}
+        setShowIndex={() => setShowIndex(index)}
         />
         ))}
         </div>

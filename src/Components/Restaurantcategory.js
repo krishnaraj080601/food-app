@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import List from './List';
-const Restaurantcategory = ({data,showitems}) => {
-    
+const Restaurantcategory = ({data,showitems,setShowIndex}) => {
+    const handleclick = () => {
+        setShowIndex();
+      };
     console.log(data);
     
   return (
