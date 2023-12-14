@@ -2,7 +2,7 @@ import React from 'react'
 import List from './List';
 const Restaurantcategory = ({data,showitems,setShowIndex,index}) => {
     const handleclick = () => {
-        if (showItems === true) {
+        if (showitems === true) {
             setShowIndex(null);
           } else {
             setShowIndex(index);
