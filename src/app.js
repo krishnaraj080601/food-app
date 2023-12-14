@@ -22,12 +22,12 @@ const Applayout =() =>{
     setUserName(data.name);
   }, []);
     return(
-    <Use.provider value={{ loggedInUser: userName, setUserName }}>
+    
         <div className="app">
             <Header/>
             <Outlet/>
         </div>
-        </Use.provider>
+      
   
       
     )
