@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import User from './User'
 import UserClass from './Userclass'
-import Use from '../Utils/Use';
 import UserContext from '../Utils/userContext';
 
 class About extends Component{
@@ -30,11 +28,11 @@ class About extends Component{
         <h2>food ordering website</h2>
         <div>
           LoggedIn User
-          <UserContext.Consumer>
+          <UserContext.consumer>
             {({ loggedInUser }) => (
               <h1 className="text-xl font-bold">{loggedInUser}</h1>
             )}
-          </UserContext.Consumer>
+          </UserContext.consumer>
         </div>
         <h2>This is Namaste React Web Series</h2>
         <UserClass name={"krishnaraj.G"} location={"Neyveli TS"}/>
