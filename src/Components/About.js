@@ -28,11 +28,11 @@ class About extends Component{
         <h2>food ordering website</h2>
         <div>
           LoggedIn User
-          <UserContext.consumer>
+          <userContext.consumer>
             {({ loggedInUser }) => (
               <h1 className="text-xl font-bold">{loggedInUser}</h1>
             )}
-          </UserContext.consumer>
+          </userContext.consumer>
         </div>
         <h2>This is Namaste React Web Series</h2>
         <UserClass name={"krishnaraj.G"} location={"Neyveli TS"}/>

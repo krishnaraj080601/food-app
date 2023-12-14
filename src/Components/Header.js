@@ -6,7 +6,7 @@ import UserContext from "../Utils/userContext";
 
 const Header = ()=>{
     const [btnNameReact,setBtnNameReact]=useState("login");
-    const { loggedInUser } = useContext(UserContext);
+    const { loggedInUser } = useContext();
     const onlineStatus = useOnlineStatus();
     return (
     <div  className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
