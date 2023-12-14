@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import usercontext from "./Utils/Usercontext";
 const Grocery = lazy(() => import("./Components/Grocery"));
 const Applayout =() =>{
   const [userName, setUserName] = useState();
@@ -21,12 +22,13 @@ const Applayout =() =>{
     setUserName(data.name);
   }, []);
     return(
-      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+
+    
         <div className="app">
             <Header/>
             <Outlet/>
         </div>
-        </UserContext.Provider>
+      
     )
 }
 const approuter=createBrowserRouter([
