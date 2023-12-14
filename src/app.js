@@ -8,6 +8,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import Use from "./Utils/Use";
 const Grocery = lazy(() => import("./Components/Grocery"));
 const Applayout =() =>{
   const [userName, setUserName] = useState();
@@ -21,11 +22,12 @@ const Applayout =() =>{
     setUserName(data.name);
   }, []);
     return(
-    
+    <Use.provider value={{ loggedInUser: userName, setUserName }}>
         <div className="app">
             <Header/>
             <Outlet/>
         </div>
+        </Use.provider>
   
       
     )
