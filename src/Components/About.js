@@ -25,12 +25,9 @@ class About extends Component{
     <div>
         <h1>about</h1>
         <div>
-        LoggedIn User
-          <UserContext.consumer>
-          {({ loggedInUser }) => (
-              <h1 className="text-xl font-bold">{loggedInUser}</h1>
-            )}
-          </UserContext.consumer>
+          <UserContext.Consumer>
+          {({loggedInUser})=> <h1>{loggedInUser}</h1>}
+          </UserContext.Consumer>
         </div>
         <h2>food ordering website</h2>
         <h2>This is Namaste React Web Series</h2>
