@@ -25,7 +25,7 @@ const fetchdata=async ()=>{
   
 }
 const onlineStatus = useOnlineStatus();
-
+const { loggedInUser, setUserName } = useContext(UserContext);
 if (onlineStatus === false)
   return (
     <h1>
