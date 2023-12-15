@@ -1,5 +1,5 @@
 import RestaurantCard, { withOffersHeader } from "./RestaurantCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { MENU_API } from "../Utils/Constant";
 import { Link } from "react-router-dom";
