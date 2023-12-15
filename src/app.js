@@ -22,6 +22,7 @@ const Applayout =() =>{
   }, []);
     return(
     
+  
         <div className="app">
             <Header/>
             <Outlet/>
