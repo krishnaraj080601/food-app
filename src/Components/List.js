@@ -1,6 +1,7 @@
 import React from 'react'
 import { CDN_URL } from '../Utils/Constant'
 import { useDispatch } from 'react-redux';
+import { addItem } from '../Utils/cartSlice';
 
 const List = ({items}) => {
 
@@ -33,7 +34,7 @@ const List = ({items}) => {
                 Add +
               </button>
                         </div>
-                 <img src={CDN_URL + item.card.info.imageId} className="w-full" />
+                 <img src={CDN_URL + item?.card?.info?.imageId} className="w-full" />
                  </div>
                  </div>
                  

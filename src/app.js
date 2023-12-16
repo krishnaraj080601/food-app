@@ -12,6 +12,7 @@ import UserContext from "./Utils/userContext";
 const Grocery = lazy(() => import("./Components/Grocery"));
 import { Provider } from "react-redux";
 import appStore from "./Utils/appStore";
+import Cart from "./Components/Cart";
 const Applayout =() =>{
   const [userName, setUserName] = useState();
 
@@ -65,7 +66,12 @@ const approuter=createBrowserRouter([
           {
             path: "/restaurants/:resId",
             element: <RestaurantMenu/>,
-          }
+          },
+          {
+            path: "/cart",
+            element: <Cart/>,
+          },
+          
         ],
         errorElement:<Error/>
 
