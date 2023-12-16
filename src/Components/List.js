@@ -1,8 +1,15 @@
 import React from 'react'
 import { CDN_URL } from '../Utils/Constant'
+import { useDispatch } from 'react-redux';
 
 const List = ({items}) => {
-    console.log(items)
+
+  console.log(items);
+  const dispatch = useDispatch();
+  const handleAddItem = (item) => {
+    // Dispatch an action
+    dispatch(addItem(item));
+  };
   return (
     <div>
         {items.map((item) =>(
@@ -22,7 +29,7 @@ const List = ({items}) => {
                     <div className='absolute'>
                     <button
                 className="mx-12 p-1 bg-gray-700 text-white shadow-lg rounded-lg hover:bg-black hover:text-white-800 font-bold border border-black-500"
-              >
+                onClick={() => handleAddItem(item)}>
                 Add +
               </button>
                         </div>
