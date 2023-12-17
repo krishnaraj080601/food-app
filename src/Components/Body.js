@@ -61,7 +61,7 @@ if (onlineStatus === false)
                 <button className="px-4 py-2 bg-gray-100 rounded-lg"
                 onClick={() => {
                   const filteredList = listofrestaurants.filter(
-                    (data) => data.info.avgRating > 4
+                    (data) => data.info.avgRating > 4.4
                   );
                   setFilteredRestaurant(filteredList);
                 }}
