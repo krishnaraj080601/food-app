@@ -36,9 +36,9 @@ const Header = ()=>{
             <Link to="/cart">Cart - ({cartItems.length} items)</Link>
           </li>
                 <button className="login" onClick={()=>{
-                     btnNameReact === "Login"
-                     ? setBtnNameReact("Logout")
-                     : setBtnNameReact("Login");
+                     btnNameReact === "login"
+                     ? setBtnNameReact("logout")
+                     : setBtnNameReact("login");
                 }}>{btnNameReact}</button>
                 <li className="px-4 font-bold ">{loggedInUser}</li>
                 </ul>
