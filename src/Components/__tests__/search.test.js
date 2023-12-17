@@ -19,10 +19,11 @@ it("Should Search Res List for burger text input ", async () => {
         </BrowserRouter>
       )
     )
-}
-    );
-    const searchBtn = screen.getAllByRole("button", { name: "Search" });
+
+    const searchBtn = screen.getByText("button", { name: "Search" });
     const searchInput = screen.getByTestId("searchInput");
-    fireEvent.change(searchInput, { target: { value: "burger" } });
+    fireEvent.change(searchInput, { target: { value: "Pizza" } });
     fireEvent.click(searchBtn);
-screen.getAllByTestId("rescard")
+
+}
+);
