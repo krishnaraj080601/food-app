@@ -1,0 +1,105 @@
+{
+    "info": {
+        "id": "50075",
+        "name": "Burma Bhai",
+        "cloudinaryImageId": "ancptvwyue2lji5krlt1",
+        "locality": "Sambandam Road",
+        "areaName": "RS Puram",
+        "costForTwo": "₹200 for two",
+        "cuisines": [
+            "South Indian",
+            "Chinese"
+        ],
+        "avgRating": 4.3,
+        "feeDetails": {
+            "restaurantId": "50075",
+            "fees": [
+                {
+                    "name": "BASE_TIME"
+                },
+                {
+                    "name": "BASE_DISTANCE",
+                    "fee": 2100
+                },
+                {
+                    "name": "ANCILLARY_SURGE_FEE"
+                }
+            ],
+            "totalFee": 2100
+        },
+        "parentId": "8583",
+        "avgRatingString": "4.3",
+        "totalRatingsString": "10K+",
+        "sla": {
+            "deliveryTime": 18,
+            "lastMileTravel": 2.3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "18 mins",
+            "lastMileTravelString": "2.3 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2023-12-18 01:30:00",
+            "opened": true
+        },
+        "badges": {
+            "textExtendedBadges": [
+                {
+                    "iconId": "guiltfree/GF_Logo_android_3x",
+                    "shortDescription": "options available",
+                    "fontColor": "#7E808C"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "",
+                                "fontColor": "#7E808C",
+                                "iconId": "guiltfree/GF_Logo_android_3x",
+                                "shortDescription": "options available"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "20% OFF",
+            "subHeader": "UPTO ₹50"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-f18df4db-b286-45b9-a23c-e93a97e576b4"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/burma-bhai-sambandam-road-rs-puram-coimbatore-50075",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}
