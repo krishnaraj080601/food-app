@@ -1,25 +1,27 @@
 {
     "info": {
-        "id": "50075",
-        "name": "Burma Bhai",
-        "cloudinaryImageId": "ancptvwyue2lji5krlt1",
-        "locality": "Sambandam Road",
-        "areaName": "RS Puram",
-        "costForTwo": "₹200 for two",
+        "id": "50495",
+        "name": "Sri Raja Biriyani Hotel",
+        "cloudinaryImageId": "zptmtdscg0fxzm2hts1q",
+        "locality": "Sathyamurthy Road",
+        "areaName": "Gandhipuram",
+        "costForTwo": "₹300 for two",
         "cuisines": [
             "South Indian",
-            "Chinese"
+            "North Indian",
+            "Grill",
+            "Tandoor"
         ],
-        "avgRating": 4.3,
+        "avgRating": 4.2,
         "feeDetails": {
-            "restaurantId": "50075",
+            "restaurantId": "50495",
             "fees": [
-                {
-                    "name": "BASE_TIME"
-                },
                 {
                     "name": "BASE_DISTANCE",
                     "fee": 2100
+                },
+                {
+                    "name": "BASE_TIME"
                 },
                 {
                     "name": "ANCILLARY_SURGE_FEE"
@@ -27,19 +29,19 @@
             ],
             "totalFee": 2100
         },
-        "parentId": "8583",
-        "avgRatingString": "4.3",
+        "parentId": "4793",
+        "avgRatingString": "4.2",
         "totalRatingsString": "10K+",
         "sla": {
-            "deliveryTime": 18,
-            "lastMileTravel": 2.3,
+            "deliveryTime": 23,
+            "lastMileTravel": 1.5,
             "serviceability": "SERVICEABLE",
-            "slaString": "18 mins",
-            "lastMileTravelString": "2.3 km",
+            "slaString": "23 mins",
+            "lastMileTravelString": "1.5 km",
             "iconType": "ICON_TYPE_EMPTY"
         },
         "availability": {
-            "nextCloseTime": "2023-12-18 01:30:00",
+            "nextCloseTime": "2023-12-18 00:00:00",
             "opened": true
         },
         "badges": {
@@ -72,8 +74,8 @@
             }
         },
         "aggregatedDiscountInfoV3": {
-            "header": "20% OFF",
-            "subHeader": "UPTO ₹50"
+            "header": "40% OFF",
+            "subHeader": "UPTO ₹80"
         },
         "orderabilityCommunication": {
             "title": {},
@@ -94,10 +96,10 @@
         "restaurantOfferPresentationInfo": {}
     },
     "analytics": {
-        "context": "seo-data-f18df4db-b286-45b9-a23c-e93a97e576b4"
+        "context": "seo-data-5a6d2314-55d4-41f5-9e36-9b33b996372d"
     },
     "cta": {
-        "link": "https://www.swiggy.com/restaurants/burma-bhai-sambandam-road-rs-puram-coimbatore-50075",
+        "link": "https://www.swiggy.com/restaurants/sri-raja-biriyani-hotel-sathyamurthy-road-gandhipuram-coimbatore-50495",
         "text": "RESTAURANT_MENU",
         "type": "WEBLINK"
     },
