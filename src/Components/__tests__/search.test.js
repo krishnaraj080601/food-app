@@ -19,11 +19,15 @@ it("Should Search Res List for burger text input ", async () => {
         </BrowserRouter>
       )
     )
+    const cardsBeforeSearch = screen.getAllByTestId("resCard");
 
-    const searchBtn = screen.getByText("button", { name: "Search" });
+    expect(cardsBeforeSearch.length).toBe(9);
+    const searchBtn = screen.getByRole("button", { name: "Search" });
     const searchInput = screen.getByTestId("searchInput");
-    fireEvent.change(searchInput, { target: { value: "Pizza" } });
+    fireEvent.change(searchInput, { target: { value: "Burger" } });
     fireEvent.click(searchBtn);
+    const cardsAfterSearch = screen.getAllByTestId("resCard");
+    expect(cardsAfterSearch.length).toBe(2);
 
 }
 );
