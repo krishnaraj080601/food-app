@@ -21,7 +21,7 @@ it("Should Search Res List for burger text input ", async () => {
     )
 }
     );
-    const searchBtn = screen.getByRole("button", { name: "search" });
+    const searchBtn = screen.getByRole("button", { name: "Search" });
     const searchInput = screen.getByTestId("searchInput");
     fireEvent.change(searchInput, { target: { value: "burger" } });
     fireEvent.click(searchBtn);

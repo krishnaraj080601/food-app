@@ -47,9 +47,9 @@ if (onlineStatus === false)
     const filteredRestaurant= listofrestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()))
     setFilteredRestaurant(filteredRestaurant);
    }
-   }>search</button>
+   }>Search</button>
         </div>
-        <div className="search m-4 p-4 flex items-center">
+        <div className="Search m-4 p-4 flex items-center">
           <label>UserName : </label>
           <input
             className="border border-black p-2"
@@ -57,7 +57,7 @@ if (onlineStatus === false)
             onChange={(e) => setUserName(e.target.value)}
           />
         </div> 
-        <div className="search m-4 p-4 flex items-center">
+        <div className="Search m-4 p-4 flex items-center">
                 <button className="px-4 py-2 bg-gray-100 rounded-lg"
                 onMouseOver={()=>{ const filterlist = listofrestaurants.filter(
                     (res) => res.info.avgRating > 4
