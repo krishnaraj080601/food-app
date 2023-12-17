@@ -59,12 +59,12 @@ if (onlineStatus === false)
         </div> 
         <div className="Search m-4 p-4 flex items-center">
                 <button className="px-4 py-2 bg-gray-100 rounded-lg"
-                onMouseOver={()=>{ const filterlist = listofrestaurants.filter(
-                    (res) => res.info.avgRating > 4
+                onClick={() => {
+                  const filteredList = listofrestaurants.filter(
+                    (data) => data.info.avgRating > 4
                   );
-                  console.log(listofrestaurants);
-                  setlistofrestaurants(filterlist);
-                  }}
+                  setFilteredRestaurant(filteredList);
+                }}
                 >Top rated restaurant</button>
                 
             </div>

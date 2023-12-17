@@ -6,7 +6,7 @@ const RestaurantCard= ({data})=>{
     //console.log(props);
    // const{resData}= props;
    // const{name,cloudinaryImageId,cuisines,avgRating}=resData?.info;
-   console.log(data);
+   //console.log(data);
    const { loggedInUser } =useContext(UserContext);
     return(
         <div data-testid="resCard"  className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
