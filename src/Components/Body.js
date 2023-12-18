@@ -65,7 +65,7 @@ if (onlineStatus === false)
                   );
                   setFilteredRestaurant(filteredList);
                 }}
-                >Top rated restaurant</button>
+                >Top Rated Restaurant</button>
                 
             </div>
             </div>

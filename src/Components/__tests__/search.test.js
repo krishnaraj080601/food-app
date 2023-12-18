@@ -52,7 +52,7 @@ it("Should filter Top Rated Restaurant", async () => {
   expect(cardsBeforeFilter.length).toBe(9);
 
   const topRatedBtn = screen.getByRole("button", {
-    name: "Top rated restaurant",
+    name: "Top Rated Restaurant",
   });
   fireEvent.click(topRatedBtn);
 
