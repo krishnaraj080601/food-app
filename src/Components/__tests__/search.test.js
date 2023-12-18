@@ -40,7 +40,7 @@ it("Should filter Top Rated Restaurant", async () => {
     )
   );
 
-  const cardsBeforeFilter = screen.getAllByTestId("rescard");
+  const cardsBeforeFilter = screen.getAllByTestId("resCard");
 
   expect(cardsBeforeFilter.length).toBe(9);
 
@@ -48,7 +48,7 @@ it("Should filter Top Rated Restaurant", async () => {
     name: "Top rated restaurant",
   });
   fireEvent.click(topRatedBtn);
-  const cardsAfterFilter = screen.getAllByTestId("rescard");
+  const cardsAfterFilter = screen.getAllByTestId("resCard");
   expect(cardsAfterFilter.length).toBe(4);
   
 });
