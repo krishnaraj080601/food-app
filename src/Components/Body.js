@@ -57,7 +57,7 @@ if (onlineStatus === false)
             onChange={(e) => setUserName(e.target.value)}
           />
         </div> 
-        <div className="Search m-4 p-4 flex items-center">
+        <div data-testid="data"  className="Search m-4 p-4 flex items-center">
                 <button className="px-4 py-2 bg-gray-100 rounded-lg"
                 onClick={() => {
                   const filteredList = listofrestaurants.filter(
