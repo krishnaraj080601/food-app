@@ -9,7 +9,7 @@ const RestaurantCard= ({data})=>{
    //console.log(data);
    const { loggedInUser } =useContext(UserContext);
     return(
-        <div data-testid="resCard"  className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+        <div data-testid="data"  className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
             <img className="rounded-lg" alt="res-logo" src={CDN_URL+data?.info.cloudinaryImageId}/>
             <h4 className="font-bold py-4 text-lg" >{data?.info.name}</h4>
             <h4>{data?.info.cuisines.join(", ")}</h4>
