@@ -27,7 +27,13 @@ it("should Load Restaurant Menu Component", async () => {
         
     )
     )
-    const accordionHeader = screen.getByText("Recommended (20 )");
+    const accordionHeader = screen.getByText("Biryanis (14 )");
     fireEvent.click(accordionHeader);
-    expect(screen.getAllByTestId("foodItems").length).toBe(20);
+    expect(screen.getAllByTestId("foodItems").length).toBe(14);
+    expect(screen.getByText("Cart - (0 items)")).toBeInTheDocument();
+    const addBtns = screen.getAllByRole("button", { name: "Add +" });
+  fireEvent.click(addBtns[1]);
+  expect(screen.getByText("Cart - (1 items)")).toBeInTheDocument();
+
+  fireEvent.click(addBtns[1]);
 })
