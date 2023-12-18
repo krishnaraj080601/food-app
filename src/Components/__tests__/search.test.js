@@ -1,9 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
-import Body from "../Body";
-import "@testing-library/jest-dom";
-import MOCK_DATA from "../mocks/mockResListData.json";
-import { act } from "react-dom/test-utils";
-import { fireEvent, render, screen } from "@testing-library/react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import Body from "../Body";
@@ -42,5 +36,26 @@ it("Should Search Res List for burger text input ", async () => {
 
   const cardsAfterSearch = screen.getAllByTestId("data");
 
-  expect(cardsAfterSearch.length).toBe(4);
+  expect(cardsAfterSearch.length).toBe(2);
+});
+it("Should filter Top Rated Restaurant", async () => {
+  await act(async () =>
+    render(
+      <BrowserRouter>
+        <Body />
+      </BrowserRouter>
+    )
+  );
+
+  const cardsBeforeFilter = screen.getAllByTestId("data");
+
+  expect(cardsBeforeFilter.length).toBe(9);
+
+  const topRatedBtn = screen.getByRole("button", {
+    name: "Top rated restaurant",
+  });
+  fireEvent.click(topRatedBtn);
+
+  const cardsAfterFilter = screen.getAllByTestId("data");
+  expect(cardsAfterFilter.length).toBe(4);
 });
