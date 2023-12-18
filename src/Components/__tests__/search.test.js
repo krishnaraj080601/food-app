@@ -19,14 +19,14 @@ it("Should Search Res List for burger text input ", async () => {
         </BrowserRouter>
       )
     )
-    const cardsBeforeSearch = screen.getAllByTestId("resCard");
+    const cardsBeforeSearch = screen.getAllByTestId("rescard");
 
     expect(cardsBeforeSearch.length).toBe(9);
     const searchBtn = screen.getByRole("button", { name: "Search" });
     const searchInput = screen.getByTestId("searchInput");
     fireEvent.change(searchInput, { target: { value: "Burger" } });
     fireEvent.click(searchBtn);
-    const cardsAfterSearch = screen.getAllByTestId("resCard");
+    const cardsAfterSearch = screen.getAllByTestId("rescard");
     expect(cardsAfterSearch.length).toBe(2);
 
 }
@@ -40,7 +40,7 @@ it("Should filter Top Rated Restaurant", async () => {
     )
   );
 
-  const cardsBeforeFilter = screen.getAllByTestId("resCard");
+  const cardsBeforeFilter = screen.getAllByTestId("rescard");
 
   expect(cardsBeforeFilter.length).toBe(9);
 
@@ -48,7 +48,7 @@ it("Should filter Top Rated Restaurant", async () => {
     name: "Top rated restaurant",
   });
   fireEvent.click(topRatedBtn);
-
-  const cardsAfterFilter = screen.getAllByTestId("resCard");
-  expect(cardsAfterFilter.length).toBe(9);
+  const cardsAfterFilter = screen.getAllByTestId("rescard");
+  expect(cardsAfterFilter.length).toBe(4);
+  
 });
