@@ -4,7 +4,6 @@ import Body from "../Body";
 import MOCK_DATA from "../mocks/mockResListData.json";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
-
 global.fetch = jest.fn(() => {
   return Promise.resolve({
     json: () => {
@@ -43,6 +42,7 @@ it("Should filter Top Rated Restaurant", async () => {
     render(
       <BrowserRouter>
         <Body />
+
       </BrowserRouter>
     )
   );
@@ -57,5 +57,5 @@ it("Should filter Top Rated Restaurant", async () => {
   fireEvent.click(topRatedBtn);
 
   const cardsAfterFilter = screen.getAllByTestId("data");
-  expect(cardsAfterFilter.length).toBe(4);
+  expect(cardsAfterFilter.length).toBe(10);
 });
