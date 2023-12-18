@@ -3,8 +3,7 @@ import { Provider } from "react-redux";
 import Header from "../Header";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
-import appStore from "../../Utils/appStore";
-
+import appStore from "../../utils/appStore";
 it("Should render Header Component with a login button", () => {
   render(
     <BrowserRouter>
