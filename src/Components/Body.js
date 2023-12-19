@@ -25,7 +25,7 @@ const fetchdata=async ()=>{
   
 }
 const onlineStatus = useOnlineStatus();
-const { loggedInUser, setUserName } = useContext(UserContext);
+
 if (onlineStatus === false)
   return (
     <h1>
@@ -49,14 +49,6 @@ if (onlineStatus === false)
    }
    }>Search</button>
         </div>
-        <div className="Search m-4 p-4 flex items-center">
-          <label>UserName : </label>
-          <input
-            className="border border-black p-2"
-            value={loggedInUser}
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </div> 
         <div data-testid="data"  className="Search m-4 p-4 flex items-center">
                 <button className="px-4 py-2 bg-gray-100 rounded-lg"
                 onClick={() => {
