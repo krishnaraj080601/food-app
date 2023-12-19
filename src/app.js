@@ -12,7 +12,6 @@ const Grocery = lazy(() => import("./Components/Grocery"));
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore"
 import Cart from "./Components/Cart";
-import usercontext from "./Utils/usercontext";
 const Applayout =() =>{
   const [userName, setUserName] = useState();
 
@@ -26,12 +25,12 @@ const Applayout =() =>{
   }, []);
     return(
     <Provider store={appStore}>
-  <usercontext.Provider value={{ loggedInUser: userName, setUserName }} >
+  <UserContext.Provider value={{ loggedInUser: userName, setUserName }} >
         <div className="app">
             <Header/>
             <Outlet/>
         </div>
-        </usercontext.Provider>
+        </UserContext.Provider>
         </Provider>
       
   
