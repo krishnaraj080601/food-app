@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
-import isObjectEmpty from "../Utils/emptyobject";
+import isObjectEmpty from "../Utils/emptyObject"
 import UserContext from "../Utils/UserContext";
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
@@ -75,7 +75,7 @@ if (onlineStatus === false)
                 key={restaurant?.info.id}
                 to={"/restaurants/" + restaurant?.info.id}
               >
-            {isObjectEmpty(
+            {isObjectEmpty (  
                     restaurant.info.aggregatedDiscountInfoV3 ||
                       restaurant.info.aggregatedDiscountInfoV2
                   ) ? (
