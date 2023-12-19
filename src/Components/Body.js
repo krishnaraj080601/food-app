@@ -5,7 +5,7 @@ import { MENU_API } from "../Utils/Constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
 import isObjectEmpty from "../Utils/emptyobject";
-import UserContext from "../Utils/userContext";
+import usercontext from "../Utils/usercontext";
 const Body= ()=>{
     const [listofrestaurants,setlistofrestaurants]=useState([]);
 
@@ -25,7 +25,7 @@ const fetchdata=async ()=>{
   
 }
 const onlineStatus = useOnlineStatus();
-const { loggedInUser, setUserName } = useContext(UserContext);
+const { loggedInUser, setUserName } = useContext(usercontext);
 if (onlineStatus === false)
   return (
     <h1>
