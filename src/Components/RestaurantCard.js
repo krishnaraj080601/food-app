@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CDN_URL } from "../Utils/Constant";
 
+
 const RestaurantCard= ({data})=>{
     //console.log(props);
    // const{resData}= props;
