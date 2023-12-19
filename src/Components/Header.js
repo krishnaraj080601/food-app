@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 const Header = ()=>{
     const [btnNameReact,setBtnNameReact]=useState("login");
     const onlineStatus = useOnlineStatus();
-    console.log(loggedInUser);
     const cartItems = useSelector((store) => store.cart.items);
     return (
     <div  className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
@@ -37,7 +36,7 @@ const Header = ()=>{
                      ? setBtnNameReact("logout")
                      : setBtnNameReact("login");
                 }}>{btnNameReact}</button>
-                <li className="px-4 font-bold ">{loggedInUser}</li>
+                
                 </ul>
 
         </div>

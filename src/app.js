@@ -16,13 +16,7 @@ const Applayout =() =>{
   
 
   //authentication
-  useEffect(() => {
-    // Make an API call and send username and password
-    const data = {
-      name: "krishnaraj G",
-    };
-    setUserName(data.name);
-  }, []);
+ 
     return(
     <Provider store={appStore}>
         <div className="app">
