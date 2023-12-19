@@ -5,7 +5,7 @@ import Header from "../Header"
 import RestaurantMenu from "../RestaurantMenu"
 import Cart from "../Cart";
 import { Provider } from "react-redux"
-import appStore from "../../utils/appStore";
+import appStore from "../../Utils/Appstore"
 import "@testing-library/jest-dom"
 import MOCK_DATA_NAME from "../mocks/mockResMenu.json"
 global.fetch = jest.fn(() =>

@@ -3,11 +3,11 @@ import { Provider } from "react-redux";
 import Header from "../Header";
 import { BrowserRouter } from "react-router-dom";
 import "@testing-library/jest-dom";
-import appStore from "../../utils/appStore";
+import appStore from "../../Utils/Appstore";
 it("Should render Header Component with a login button", () => {
   render(
     <BrowserRouter>
-      <Provider store={appStore}>
+      <Provider store={appstore}>
         <Header />
       </Provider>
     </BrowserRouter>
@@ -23,7 +23,7 @@ it("Should render Header Component with a login button", () => {
 it("Should render Header Component with a Cart items 0 ", () => {
   render(
     <BrowserRouter>
-      <Provider store={appStore}>
+      <Provider store={AppStore}>
         <Header />
       </Provider>
     </BrowserRouter>
@@ -37,7 +37,7 @@ it("Should render Header Component with a Cart items 0 ", () => {
 it("Should render Header Component with a Cart item ", () => {
   render(
     <BrowserRouter>
-      <Provider store={appStore}>
+      <Provider store={Appstore}>
         <Header />
       </Provider>
     </BrowserRouter>
@@ -51,7 +51,7 @@ it("Should render Header Component with a Cart item ", () => {
 it("Should change Login Button to Logout on click", () => {
   render(
     <BrowserRouter>
-      <Provider store={appStore}>
+      <Provider store={AppStore}>
         <Header />
       </Provider>
     </BrowserRouter>
