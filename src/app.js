@@ -12,17 +12,31 @@ const Grocery = lazy(() => import("./Components/Grocery"));
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore"
 import Cart from "./Components/Cart";
+import UserContext from "./Utils/UserContext";
 const Applayout =() =>{
   
 
   //authentication
+  const [userName, setUserName] = useState();
+
+  //authentication
+  useEffect(() => {
+    // Make an API call and send username and password
+    const data = {
+      name: "Akshay Saini",
+    };
+    setUserName(data.name);
+  }, []);
+
  
     return(
     <Provider store={appStore}>
+       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         <div className="app">
-            <Header/>
-            <Outlet/>
+          <Header />
+          <Outlet />
         </div>
+      </UserContext.Provider>
        
         </Provider>
       

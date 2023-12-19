@@ -1,7 +1,6 @@
 import RestaurantCard, { withOffersHeader } from "./RestaurantCard";
 import { useContext, useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
-import { MENU_API } from "../Utils/Constant";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
 import isObjectEmpty from "../Utils/emptyobject";
@@ -32,7 +31,7 @@ if (onlineStatus === false)
       Looks like you're offline!! Please check your internet connection;
     </h1>
   );
-
+  const { loggedInUser, setUserName } = useContext(UserContext);
     return listofrestaurants.length === 0?(
         <Shimmer/>
     ):(
@@ -60,6 +59,14 @@ if (onlineStatus === false)
                 >Top Rated Restaurant</button>
                 
             </div>
+            <div className="search m-4 p-4 flex items-center">
+          <label>UserName : </label>
+          <input
+            className="border border-black p-2"
+            value={loggedInUser}
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
             </div>
             <div className="flex flex-wrap">
             {
