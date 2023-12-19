@@ -25,12 +25,12 @@ const Applayout =() =>{
   }, []);
     return(
     <Provider store={appStore}>
-  <UserContext.Provider value={{ loggedInUser: userName, setUserName }} >
+  <usercontext.Provider value={{ loggedInUser: userName, setUserName }} >
         <div className="app">
             <Header/>
             <Outlet/>
         </div>
-        </UserContext.Provider>
+        </usercontext.Provider>
         </Provider>
       
   
